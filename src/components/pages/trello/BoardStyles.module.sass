@@ -1,0 +1,125 @@
+@import "src/Variables"
+@import "src/Root"
+.board
+  position: relative
+  width: 100%
+  .management
+    @include grayBorder()
+    border-left: none !important
+    display: grid
+    align-items: center
+    grid-template-columns: 1fr 1fr max-content
+    box-sizing: border-box
+    padding: 15px 5px
+    color: $grayColor
+    div
+      align-items: center
+      height: 100%
+    .board_description
+      display: flex
+      .statistic
+        margin-left: 15px
+        display: flex
+        justify-content: space-between
+        span
+          padding-top: 2px
+          box-sizing: border-box
+          margin-left: 5px
+          font-size: 0.9em
+      .board_name
+        display: flex
+        font-size: 1.1em !important
+        font-weight: bolder
+        color: black
+    .icons
+      display: flex
+      justify-content: space-around
+      div
+        display: flex
+        align-items: center
+  .createTaskPanel
+    border-bottom: 2px solid $lightBorder
+    padding: 10px 5px
+    display: grid
+    grid-row-gap: 15px
+    .buttonBlock
+      width: 40%
+  .filterPanel
+    width: 100%
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    .close
+      width: 100%
+      justify-content: flex-end
+      display: flex
+      padding: 10px
+      box-sizing: border-box
+    .filters
+      padding: 10px 5%
+      display: grid
+      box-sizing: border-box
+      grid-template-columns: repeat(3,1fr)
+      grid-row-gap: 15px
+      grid-column-gap: 15px
+    .save_filters
+      padding: 10px 5%
+      width: 100%
+      box-sizing: border-box
+      justify-content: space-between
+      align-items: center
+      display: flex
+      box-sizing: border-box
+      .checkbox_block
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .checkbox
+          display: flex
+        flex-direction: row
+        align-items: center
+        .checkbox:last-child
+          padding-left: 16px
+        label
+          padding-left: 3px
+          box-sizing: border-box
+
+      .buttons
+        width: 170px
+        justify-content: space-between
+        display: flex
+        flex-direction: row
+  .category_list
+    padding: 5px
+    overflow: auto
+    box-sizing: border-box
+  .addColumn
+    font-size: 0.9em
+    display: flex
+    padding: 10px
+    align-items: center
+    justify-content: flex-start
+    color: $habr
+    border-bottom: 2px solid $lightBorder
+  .create_column_panel
+    border-bottom: 2px solid $lightBorder
+    padding: 10px 5px 20px 5px
+    display: flex
+    position: relative
+    flex-direction: column
+    align-items: center
+    .create_column_panel_content
+      width: 50%
+      display: grid
+      grid-row-gap: 10px
+      padding-top: 7px
+    .create_column_panel_content_button_wrapper
+      width: 100%
+      display: flex
+      justify-content: flex-start
+    .close
+      width: 100%
+      justify-content: flex-end
+      display: flex
+      color: $grayColor
+

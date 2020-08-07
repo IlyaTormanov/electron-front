@@ -1,0 +1,23 @@
+//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap')
+@import "src/Variables.sass"
+
+*
+  font-family: $roboto
+  margin: 0
+  padding: 0
+  .App
+  
+    font-size: 13px
+@mixin flexRowSpaceBetween($padding)
+  box-sizing: border-box
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  padding: $padding
+@mixin grayBorder
+  border-top: 0
+  border-right: 1px solid $lightBorder
+  border-bottom: 3px solid $lightBorder
+  border-left: 1px solid $lightBorder

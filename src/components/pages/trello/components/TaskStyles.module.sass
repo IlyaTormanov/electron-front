@@ -1,0 +1,47 @@
+//@include flexRowSpaceBetween
+@import 'src/Root.sass'
+@import "src/Variables.sass"
+
+.container
+  cursor: pointer
+  font-size: 0.9em !important
+  color: $grayColor
+  padding: 8px 14px
+  display: grid
+  align-items: center
+  grid-template-columns: max-content 200px repeat(3, 1fr) 200px max-content
+  grid-column-gap: 15px
+  height: 70px
+  @include grayBorder()
+  .creator
+    div
+      padding: 3px
+    box-sizing: border-box
+  .task_description
+    color: black
+    padding-left: 20px
+    box-sizing: border-box
+
+  .subscribers
+    display: flex
+    flex-direction: row
+
+    .total_subs
+      width: 18px
+      height: 18px
+      border-radius: 50%
+      background: $green
+      color: white
+      font-size: 0.8em
+      padding: 2px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+      justify-content: center
+    div
+      padding: 3px
+
+  .target
+    padding-left: 20px
+
+

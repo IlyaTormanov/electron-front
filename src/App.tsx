@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Root.sass'
+import {Route,Switch} from "react-router";
+import {Main} from "./Main";
+import {Registration} from "./components/pages/authorization/Registration";
+import {Login} from "./components/pages/authorization/Login";
+import { ConnectedRouter } from 'connected-react-router';
+import {history} from "./index";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ConnectedRouter history={history}>
+            <Switch>
+                <Route path={'/login'} component={Login}/>
+                <Route path={'/registration'} component={Registration}/>
+                <Route path={'/'} component={Main}/>
+            </Switch>
+        </ConnectedRouter>
     </div>
   );
 }
